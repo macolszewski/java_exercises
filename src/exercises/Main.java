@@ -135,6 +135,7 @@ public class Main {
         for (Książka książka : książkaList) {
             if (książka.getLiczbaStron() == 200) {
                 System.out.println(książka);
+
             }
         }
 
@@ -149,16 +150,38 @@ public class Main {
         książkaList.addAll(książkaList2);
         System.out.println(książkaList.size());
         System.out.println(książkaList);
-    }
+
 
 //    Zadanie 10
 
-    Scanner input = new Scanner(System.in);
-//    System.out.print("Podaj imię lub wpisz END: ");
-    String imię = input.next();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Podaj imię lub wpisz END: ");
+        String imię = input.next();
+        List<String> imiona = new ArrayList<String>();
+        imiona.add(imię);
 
-    {
+        while (true) {
+            if (imiona.get(0).equals("END")) {
+                imiona.remove(0);
+                break;
+            }
+        System.out.print("Podaj imię lub wpisz END: ");
+        imię = input.next();
+        if (imiona.contains(imię)) {
+            System.out.println("To imię jest już na liście!");
+            continue;
+        }
+        else if (!imię.equals("END")) {
+            imiona.add(imię);
+            continue;
+        } else {
+            break;
+        }
+
+        }
+        System.out.println(imiona.size());
+        System.out.println(imiona);
+
 
     }
-
 }
