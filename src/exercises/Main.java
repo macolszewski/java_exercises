@@ -78,14 +78,14 @@ public class Main {
 
 //        Zadanie 7
 
-        List<Integer> integerList = new ArrayList<Integer>();
-        integerList = Arrays.asList(5, 23, 21, 34, 66, 54, 223, 4, 3, 66, 34, 2, 11, 9, 8);
+        List<Integer> integerList = new ArrayList<>(Arrays.asList(5, 23, 21, 34, 66, 54, 223, 4, 3, 66, 34, 2, 11, 9, 8));
         for (Integer integer : integerList) {
             System.out.print(integer + ", ");
         }
         System.out.println();
         System.out.println("Długość listy: " + integerList.size());
-        integerList = integerList.subList(1, integerList.size() - 1);
+        integerList.remove(0);
+        integerList.remove(integerList.size() - 1);
         System.out.println("Długość listy: " + integerList.size());
 
 
@@ -155,33 +155,56 @@ public class Main {
 //    Zadanie 10
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Podaj imię lub wpisz END: ");
-        String imię = input.next();
+        String imię = "";
         List<String> imiona = new ArrayList<String>();
-        imiona.add(imię);
 
         while (true) {
-            if (imiona.get(0).equals("END")) {
-                imiona.remove(0);
+            System.out.print("Podaj imię lub wpisz END: ");
+            imię = input.next();
+            if (imiona.contains(imię)) {
+                System.out.println("To imię jest już na liście!");
+                continue;
+            } else if (!imię.equals("END")) {
+                imiona.add(imię);
+                continue;
+            } else {
                 break;
             }
-        System.out.print("Podaj imię lub wpisz END: ");
-        imię = input.next();
-        if (imiona.contains(imię)) {
-            System.out.println("To imię jest już na liście!");
-            continue;
-        }
-        else if (!imię.equals("END")) {
-            imiona.add(imię);
-            continue;
-        } else {
-            break;
-        }
 
         }
         System.out.println(imiona.size());
         System.out.println(imiona);
 
+//        Zadanie 11
+
+
+        Scanner palindrom_input = new Scanner(System.in);
+        List<String> palindromy = new ArrayList<String>();
+
+        while (true) {
+            System.out.print("Podaj palindrom lub wpisz END: ");
+            String tekst = palindrom_input.next();
+            tekst = tekst.toLowerCase();
+
+            if (tekst.equals("end")) {
+                break;
+            } else if (palindromy.contains(tekst)) {
+                System.out.println("Ten wyraz jest już na liście!");
+                continue;
+            } else if (Palindrom.czyPalindrom(tekst)) {
+                palindromy.add(tekst);
+                continue;
+            } else if (!Palindrom.czyPalindrom(tekst)) {
+                System.out.println("Ten wyraz nie jest palindromem!");
+                continue;
+            } else {
+                break;
+            }
+
+        }
+        System.out.println(palindromy);
+
 
     }
 }
+

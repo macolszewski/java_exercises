@@ -1,8 +1,8 @@
 package exercises;
 
 public class Zwierzę {
-    protected String imię = "";
-    protected Integer wiek = 0;
+    private String imię = "";
+    private Integer wiek = 0;
 
     public Zwierzę(String imię, Integer wiek) {
         this.imię = imię;
