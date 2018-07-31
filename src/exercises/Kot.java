@@ -1,6 +1,6 @@
 package exercises;
 
-public class Kot extends Zwierzę {
+public class Kot extends Zwierze {
     RasaKota rasa;
 
     public Kot(String imię, Integer wiek, RasaKota rasa) {

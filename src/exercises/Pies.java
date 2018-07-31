@@ -1,6 +1,6 @@
 package exercises;
 
-public class Pies extends Zwierzę {
+public class Pies extends Zwierze {
     RasaPsa rasa;
 
     public Pies(String imię, Integer wiek, RasaPsa rasa) {

@@ -5,10 +5,10 @@ import java.util.Date;
 public class Człowiek {
     private String imię;
     private String nazwisko;
-    private Zwierzę zwierzę;
+    private Zwierze zwierzę;
     private DaneAdresowe daneAdresowe;
 
-    public Człowiek(String imię, String nazwisko, Zwierzę zwierzę, DaneAdresowe daneAdresowe) {
+    public Człowiek(String imię, String nazwisko, Zwierze zwierzę, DaneAdresowe daneAdresowe) {
         this.imię = imię;
         this.nazwisko = nazwisko;
         this.zwierzę = zwierzę;

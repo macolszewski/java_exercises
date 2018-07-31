@@ -47,7 +47,7 @@ public class Main {
 
         System.out.println(człowiekZKotem.nazwyamSie());
         System.out.println(człowiekZPsem.nazwyamSie());
-        System.out.println(człowiekZKotem.nazywamSie("Kocham zwierzęta."));
+        System.out.println(człowiekZKotem.nazywamSie("Kocham Zwierzeta."));
         System.out.println(człowiekZPsem.nazywamSie("Kocham zwierzęta."));
 
 //        LISTY:
