@@ -15,10 +15,7 @@ public class Palindrom {
             tekstOdwrocony = tekstOdwrocony.concat(String.valueOf(tekst.charAt(i)));
         }
 
-        //TODO lepiej zrobić tak: return  (tekst.equals(tekstOdwrocony)) ? true : false;
-        if (tekst.equals(tekstOdwrocony)) {
-            return true;
-        } else return false;
+        return (tekst.equals(tekstOdwrocony)) ? true : false;
 
     }
 
